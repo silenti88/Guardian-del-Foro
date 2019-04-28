@@ -1,0 +1,26 @@
+{
+  "name": "Guardian-del-Foro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silenti88/Guardian-del-Foro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/silenti88/Guardian-del-Foro/issues"
+  },
+  "homepage": "https://github.com/silenti88/Guardian-del-Foro#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  },
+  "engines":{
+    "node": "10.x"
+  }
+}
