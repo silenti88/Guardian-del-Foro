@@ -18,7 +18,7 @@ client.on("reconnecting", () => {
     console.log("You have been reconnected");
 });
 
-client.login();
+client.login(process.env.BOT_TOKEN);
 
 client.setInterval(function channelStatus(){
     date = new Date();
