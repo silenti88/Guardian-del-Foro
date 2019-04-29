@@ -22,15 +22,17 @@ client.login(process.env.BOT_TOKEN);
 
 client.setInterval(function channelStatus(){
     date = new Date();
-    let nightChannel = client.guilds.get('560406112956973063').roles.get('560414885012439042');
+    var utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+    newdate = new Date(utc + (3600000*-4));
+    let nightRole = client.guilds.get('560406112956973063').roles.find(r=>r.name === "Anikis");
 
-    if(date.getHours() === 20 && date.getMinutes() === 0){
-        client.channels.get("560406616839553034").overwritePermissions(nightChannel,{
+    if(newdate.getHours() === 20 && newdate.getMinutes() === 0){
+        client.channels.get("560406616839553034").overwritePermissions(nightRole,{
             SEND_MESSAGES: true
         }).catch(console.error())
-    }else if(date.getHours() === 24 && date.getMinutes() === 0){
+    }else if(newdate.getHours() === 24 && newdate.getMinutes() === 0){
 
-        client.channels.get("560406616839553034").overwritePermissions(nightChannel,{
+        client.channels.get("560406616839553034").overwritePermissions(nightRole,{
             SEND_MESSAGES: false
         }).catch(console.error())
     }
