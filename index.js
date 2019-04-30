@@ -30,7 +30,7 @@ client.setInterval(function channelStatus(){
         client.channels.get("560406616839553034").overwritePermissions(nightRole,{
             SEND_MESSAGES: true
         }).catch(console.error())
-    }else if(newdate.getHours() === 24 && newdate.getMinutes() === 0){
+    }else if(newdate.getHours() === 0 && newdate.getMinutes() === 0){
 
         client.channels.get("560406616839553034").overwritePermissions(nightRole,{
             SEND_MESSAGES: false
